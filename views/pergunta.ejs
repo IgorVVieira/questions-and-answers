@@ -12,7 +12,7 @@
         <form action="/responder" method="post">
             <h3>Responda</h3>
             <label for="">Resposta</label>
-            <textarea placeholder="Digite sua resposta" class="form-control" name="corpo"></textarea>
+            <textarea placeholder="Digite sua resposta" class="form-control" name="corpo" required></textarea>
             <input type="hidden" name="perguntaId" value="<%= pergunta.id %>">
             <br>
             <button type="submit" class="btn btn-primary">Responder</button>
