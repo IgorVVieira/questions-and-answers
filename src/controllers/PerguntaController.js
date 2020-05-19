@@ -1,4 +1,5 @@
 const Pergunta = require('../models/Pergunta');
+const Resposta = require('../models/Resposta');
 
 module.exports = {
 
@@ -42,8 +43,19 @@ module.exports = {
         if (pergunta === null) {
             return res.redirect('/');
         }
+
+        const resposta = await Resposta.findAll({
+            where: {
+                perguntaId: id,
+            },
+            order: [
+                ['id', 'DESC']
+            ],
+        });
+
         return res.render('pergunta', {
-            pergunta
+            pergunta,
+            resposta,
         });
     },
 };

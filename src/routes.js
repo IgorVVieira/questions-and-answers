@@ -14,4 +14,6 @@ routes.post('/salvarPergunta', PerguntaController.insert);
 
 routes.get('/pergunta/:id', PerguntaController.show);
 
+routes.post('/responder', RespostaController.store);
+
 module.exports = routes;
