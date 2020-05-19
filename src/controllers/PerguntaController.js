@@ -5,6 +5,10 @@ module.exports = {
     async index(req, res) {
         const pergunta = await Pergunta.findAll({
             raw: true,
+            // Configurar exibição de ordem decrescente do ID
+            order: [
+                ['id', 'DESC'] //ASC = Crescente(Ascendente)
+            ],
         });
 
         return res.render('index', {
@@ -13,8 +17,10 @@ module.exports = {
     },
 
     async insert(req, res) {
-        const titulo = req.body.titulo;
-        const descricao = req.body.descricao;
+        const {
+            titulo,
+            descricao
+        } = req.body;
 
         await Pergunta.create({
             titulo,
@@ -22,5 +28,22 @@ module.exports = {
         });
 
         return res.redirect('/');
-    }
-}
+    },
+
+    async show(req, res) {
+        const {
+            id
+        } = req.params;
+        const pergunta = await Pergunta.findOne({
+            where: {
+                id,
+            },
+        });
+        if (pergunta === null) {
+            return res.redirect('/');
+        }
+        return res.render('pergunta', {
+            pergunta
+        });
+    },
+};

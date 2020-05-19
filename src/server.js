@@ -3,11 +3,11 @@ const app = express();
 const connection = require('./database/database');
 const routes = require('./routes');
 
-const port = 3000;
+const port = 3001;
 
 connection.authenticate()
     .then(() => {
-        console.log('Conexão ok');
+        console.log();
     }).catch((err) => {
         console.log(err);
     });
