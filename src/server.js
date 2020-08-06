@@ -5,12 +5,11 @@ const routes = require('./routes');
 
 const port = 3001;
 
-connection.authenticate()
-    .then(() => {
-        console.log();
-    }).catch((err) => {
-        console.log(err);
-    });
+try {
+    connection.authenticate();
+} catch (error) {
+    console.log(error);
+}
 
 app.set('view engine', 'ejs');
 

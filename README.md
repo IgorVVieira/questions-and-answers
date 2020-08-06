@@ -8,13 +8,13 @@ Frequently asked questions and answers platform for Yahoo Answers and the like. 
 > open the project
 > Ctrl + '
 > npm install
-> npm start
+> npm run dev
 ```
 
 ## Made with
 * [Visual Studio Code](https://code.visualstudio.com/) - Code editor.
 * [Node.js](https://nodejs.org/en/).
-* [MySQL](https://www.mysql.com/) - Database.
+* [PostgreSQL](https://www.postgresql.org/) - Database.
 
 ## Versions
 VERSION 1.0

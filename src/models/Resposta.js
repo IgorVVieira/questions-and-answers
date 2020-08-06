@@ -1,13 +1,13 @@
-const Sequelize = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 const connection = require('../database/database');
 
 const Resposta = connection.define('resposta', {
     corpo: {
-        type: Sequelize.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     perguntaId: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
 });

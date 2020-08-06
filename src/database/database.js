@@ -1,8 +1,6 @@
-const Sequelize = require('sequelize');
+const { Sequelize } = require('sequelize');
+const config = require('./config');
 
-const connection = new Sequelize('ask_clone', 'root', '0000', {
-    host: 'localhost',
-    dialect: 'mysql',
-});
+const connection = new Sequelize(config);
 
 module.exports = connection;
