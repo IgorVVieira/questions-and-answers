@@ -7,8 +7,8 @@ Frequently asked questions and answers platform for Yahoo Answers and the like. 
 ```
 > open the project
 > Ctrl + '
-> npm install
-> npm run dev
+> yarn
+> yarn dev
 ```
 
 ## Made with
