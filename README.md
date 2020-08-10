@@ -1,7 +1,7 @@
 # questions-and-answers 🎯
 Frequently asked questions and answers platform for Yahoo Answers and the like. Made with node and using MySQL database.
 
-**Key words:** JavaScript, Node.js, MySQL.
+**Key words:** JavaScript, Node.js, PostgreSQL.
 
 ## How to Execute 🤔
 ```
