@@ -1,5 +1,5 @@
 # questions-and-answers 🎯
-Frequently asked questions and answers platform for Yahoo Answers and the like. Made with node and using MySQL database.
+Frequently asked questions and answers platform for Yahoo Answers and the like. Made with node and using PostgreSQL database.
 
 **Key words:** JavaScript, Node.js, PostgreSQL.
 
